@@ -12,7 +12,7 @@ validate_section_ttyd()
 	uci_load_validate ttyd ttyd "$1" "$2" \
 		'enable:bool:1' \
 		'port:port' \
-		'interface:string' \
+		${interface:+-i $interface} \
 		'credential:string' \
 		'uid:uinteger' \
 		'gid:uinteger' \
