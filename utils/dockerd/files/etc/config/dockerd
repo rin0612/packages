@@ -36,3 +36,6 @@ config firewall 'firewall'
 	option device 'docker0'
 	list blocked_interfaces 'wan'
 #	option extra_iptables_args '--match conntrack ! --ctstate RELATED,ESTABLISHED' # allow outbound connections
+
+config dockerman 'dockerman'
+	list ac_allowed_interface 'eth0'
